@@ -6,7 +6,7 @@ import Input from '../components/UI/Input/Input';
 
 function Home() {
   const subscriptionStatusActions: ReactNode = (
-    <Button btnSize='medium' btnType='primary'>
+    <Button btnsize='medium' btntype='primary'>
       Check
     </Button>
   );

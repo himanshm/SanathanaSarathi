@@ -5,8 +5,8 @@ import styles from './Button.module.css';
 // Defining Button properties
 type ButtonProps = ComponentPropsWithoutRef<'button'> & {
   children: ReactNode;
-  btnType?: 'primary' | 'secondary' | 'danger';
-  btnSize?: 'small' | 'medium' | 'large';
+  btntype?: 'primary' | 'secondary' | 'danger';
+  btnsize?: 'small' | 'medium' | 'large';
   to?: never;
   href?: never;
 };
@@ -14,16 +14,16 @@ type ButtonProps = ComponentPropsWithoutRef<'button'> & {
 // Defining properties for using Link from react-router-dom
 type LinkButtonProps = Omit<LinkProps, 'to'> & {
   children: ReactNode;
-  btnType?: 'primary' | 'secondary' | 'danger';
-  btnSize?: 'small' | 'medium' | 'large';
+  btntype?: 'primary' | 'secondary' | 'danger';
+  btnsize?: 'small' | 'medium' | 'large';
   to: string;
 };
 
 // Defining properties for an anchor element
 type AnchorProps = ComponentPropsWithoutRef<'a'> & {
   children: ReactNode;
-  btnType?: 'primary' | 'secondary' | 'danger';
-  btnSize?: 'small' | 'medium' | 'large';
+  btntype?: 'primary' | 'secondary' | 'danger';
+  btnsize?: 'small' | 'medium' | 'large';
   href: string;
 };
 
@@ -42,8 +42,8 @@ const isAnchorProps = (props: Props): props is AnchorProps => {
 const Button = (props: Props) => {
   const classNames = [
     styles.button,
-    props.btnType && styles[props.btnType] ? styles[props.btnType] : '',
-    props.btnSize && styles[props.btnSize] ? styles[props.btnSize] : '',
+    props.btntype && styles[props.btntype] ? styles[props.btntype] : '',
+    props.btnsize && styles[props.btnsize] ? styles[props.btnsize] : '',
   ]
     .filter(Boolean) // This will remove any empty strings resulting from ternary operations
     .join(' ');
