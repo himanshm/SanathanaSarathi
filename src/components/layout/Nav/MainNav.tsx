@@ -1,20 +1,6 @@
 import styles from './MainNav.module.css';
-import { HiOutlineHome } from 'react-icons/hi2';
-import { HiOutlineInformationCircle } from 'react-icons/hi2';
+import { navItems } from '../../../utils/navigationItems';
 import { IconButton } from '../../UI/Icon/IconButton';
-
-const navItems = [
-  {
-    icon: HiOutlineHome,
-    to: '/',
-    name: 'home',
-  },
-  {
-    icon: HiOutlineInformationCircle,
-    to: '/about',
-    name: 'About',
-  },
-];
 
 function MainNav() {
   return (
