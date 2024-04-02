@@ -1,0 +1,41 @@
+/* Card.module.css */
+.card {
+  background-color: var(--color-grey-0);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card h2 {
+  font: inherit;
+  font-size: 2.5rem;
+  font-weight: 500;
+  background-color: var(--color-brand-500);
+  color: var(--color-grey-0);
+  padding: 1rem 3rem;
+  margin: 0;
+  border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+}
+
+.card-content {
+  padding: 1rem 3rem;
+}
+
+.card-actions {
+  padding: 1rem 3rem;
+  background-color: var(--color-grey-50);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Assuming you have light and dark mode classes applied to the body or a parent container */
+.card.light-mode {
+  background-color: var(--color-grey-0);
+  color: var(--color-grey-700);
+}
+
+.card.dark-mode {
+  background-color: var(--color-grey-800);
+  color: var(--color-grey-200);
+}
