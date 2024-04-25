@@ -6,6 +6,7 @@ import AppLayout from './pages/AppLayout.tsx';
 
 const HomePage = lazy(() => import('./pages/Home.tsx'));
 const AboutPage = lazy(() => import('./pages/About.tsx'));
+const SubscriptionPage = lazy(() => import('./pages/Subscription.tsx'));
 
 // You could also create a layout route that wraps a React.Suspense around an Outlet component.
 
@@ -20,6 +21,7 @@ const Root = (
     <Route element={<AppLayout />}>
       <Route index element={<HomePage />} />
       <Route path='/about' element={<AboutPage />} />
+      <Route path='/subscribe' element={<SubscriptionPage />} />
     </Route>
   </Route>
 );
